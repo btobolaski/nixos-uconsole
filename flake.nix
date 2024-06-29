@@ -1,7 +1,7 @@
 {
   description = "NixOS support for clockworkPi uConsole";
 
-  inputs.nixpkgs.url = "nixpkgs/release-23.11";
+  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
   inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
   outputs = {
