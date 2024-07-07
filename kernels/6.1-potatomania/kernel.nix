@@ -54,7 +54,6 @@ in {
 
   boot.initrd.kernelModules = [
     "ocp8178-bl"
-    "panel-clockwork-cwu50"
     "simple-amplifier-switch"
   ];
 
