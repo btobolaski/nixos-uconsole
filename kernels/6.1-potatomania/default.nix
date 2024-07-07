@@ -69,6 +69,7 @@
   hardware.raspberry-pi."4".apply-overlays-dtmerge.enable = true;
   hardware.raspberry-pi."4".dwc2.enable = true;
   hardware.raspberry-pi."4".dwc2.dr_mode = "host";
+  hardware.raspberry-pi."4".xhci.enable = true;
   hardware.deviceTree.enable = true;
   hardware.deviceTree.overlays =
     (import ../clockworkpi-uconsole-overlays.nix)
