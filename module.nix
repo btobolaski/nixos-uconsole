@@ -32,26 +32,5 @@
       rm -f firmware/config.txt
       cp ${configTxt} firmware/config.txt
     '';
-
-    networking.networkmanager.enable = true;
-    powerManagement.cpuFreqGovernor = "ondemand";
-    services.openssh.enable = true;
-
-    # ---- Some extra stuff, this should be removed or make it configurable
-    # TODO make this configurable
-    users.mutableUsers = false;
-    users.users.nixos = {
-      password = "nixos";
-      isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager" "video"];
-      shell = pkgs.bashInteractive;
-    };
-
-    programs.git.enable = true;
-    nix.extraOptions = ''
-      experimental-features = nix-command flakes
-      keep-outputs = true
-      keep-derivations = true
-    '';
   };
 }
